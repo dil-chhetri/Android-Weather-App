@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_below="@id/cityTextView"
+        >
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter city name"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+
+            android:layout_alignParentTop="true"
+
+            android:background="@android:drawable/editbox_background" />
+
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="-35dp"
+
+            android:src="@drawable/baseline_search_24" />
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/cityTextView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#fff"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textStyle="bold"
+        android:text="Kathmandu"
+        android:textSize="20sp"
+         />
+    <TextView
+        android:id="@+id/weatherDesc"
+        android:layout_below="@id/weatherIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cloudy"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="#bab8b8"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/weatherIconImageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/linearlayoutsearch"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherDesc"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:text="29"
+        android:textSize="100dp"
+        android:textStyle="normal" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/temperatureTextView"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+
+        />
+
+</RelativeLayout>
